@@ -1,0 +1,107 @@
+@import "/src/styles.scss";
+
+:host {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: $medium;
+  color: $dark;
+}
+
+#content {
+  height: 100%;
+  padding-block: 1%;
+  padding-inline: 1%;
+  width: 100%;
+  max-width: 1200px;
+  font-size: calc(var(--responsiveUnit) * 0.8);
+  background: $medium;
+}
+
+.cards {
+  // height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    @include fixedHeight(calc(var(--responsiveUnit) * 10));
+    @include fixedWidth(calc(var(--responsiveUnit) * 10));
+    // aspect-ratio: 1;
+    margin: 2%;
+    border-radius: calc(var(--responsiveUnit) * 2);
+    background: $medium;
+    box-shadow:
+      inset 20px 20px 60px #7c7e85,
+      inset -20px -20px 60px #a8aab3;
+    @include allVendors(transition, all 300ms ease-in-out);
+    border: calc(var(--responsiveUnit) * 0.2) solid $medium;
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+    &[type="form"] {
+      border-color: $primary;
+    }
+    &[type="loader"] {
+      border-color: $secondary;
+    }
+    &[type="interactive"] {
+      border-color: $tertiary;
+    }
+    &[type="random"] {
+      border-color: $danger;
+    }
+    &[type="game"] {
+      border-color: $success;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: $dark;
+      text-decoration: none;
+      font-size: calc(var(--responsiveUnit) * 1.2);
+      white-space: pre-wrap;
+      word-break: break-all;
+      overflow: hidden;
+      margin-top: 30%;
+      height: 40%;
+      width: 100%;
+      font-weight: bolder;
+    }
+
+    p {
+      margin: 0;
+      height: 40%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: calc(var(--responsiveUnit) * 1);
+    }
+
+    span {
+      background: $light;
+      border-radius: calc(var(--responsiveUnit) * 1);
+      padding: 4%;
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      color: $dark;
+      font-size: calc(var(--responsiveUnit) * 1);
+    }
+  }
+}
