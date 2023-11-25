@@ -9,6 +9,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { TestComponent } from './pages/test/test.component';
 
 import { SvgRendererComponent } from './components/svg-renderer/svg-renderer.component';
+import { CreateKeysComponent } from './pages/create-keys/create-keys.component';
+import { EncryptComponent } from './pages/encrypt/encrypt.component';
+import { DecryptComponent } from './pages/decrypt/decrypt.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,10 @@ import { SvgRendererComponent } from './components/svg-renderer/svg-renderer.com
     TestComponent,
 
     SvgRendererComponent,
+
+    CreateKeysComponent,
+    EncryptComponent,
+    DecryptComponent,
   ],
   imports: [
     BrowserModule,
