@@ -13,7 +13,7 @@ import { Location } from '@angular/common';
 })
 export class AppComponent {
   PROJECT_NAME = 'RSA Cryptographer';
-  PROJECT_DIR = 'web-adventure';
+  PROJECT_DIR = 'RSA-cryptographer';
 
   title = 'AppComponent';
 
